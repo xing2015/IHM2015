@@ -38,6 +38,9 @@ public class ViewProchaineCoup extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setBorder(javax.swing.BorderFactory.createTitledBorder("Prochaine coup"));
+        setFont(new java.awt.Font("Adobe Arabic", 1, 12)); // NOI18N
+
         jButton4.setText("D/D");
 
         jButton1.setText("C/C");
@@ -85,7 +88,7 @@ public class ViewProchaineCoup extends javax.swing.JPanel {
                     .addComponent(jButton2)
                     .addComponent(jButton4)
                     .addComponent(jLabel4))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +108,7 @@ public class ViewProchaineCoup extends javax.swing.JPanel {
                     .addComponent(jButton4)
                     .addComponent(jButton3)
                     .addComponent(jLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
