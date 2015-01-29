@@ -4,22 +4,24 @@
  * and open the template in the editor.
  */
 
-package ihmtp2;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 /**
  *
  * @author Administrator
  */
-public class Partie {
+public class Partie  extends Observable {
     int nbCoup=0;
     int scoreA=0;
     int scoreB=0;
     int gainA=0;
     int gainB=0;
     List<Coup> choix = new ArrayList<Coup>();
+    
     public Partie() {
     }
   
@@ -52,7 +54,8 @@ public class Partie {
          this.scoreA = this.scoreA+this.gainA;
          this.scoreB=this.scoreB+this.gainB;
         this.nbCoup++;
-        
+        setChanged();
+        notifyObservers(this);
     }
 
     public int getNbcoups() {

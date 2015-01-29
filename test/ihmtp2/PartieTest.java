@@ -6,6 +6,7 @@
 
 package ihmtp2;
 
+import model.Partie;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
