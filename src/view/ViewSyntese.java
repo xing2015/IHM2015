@@ -19,11 +19,13 @@ public class ViewSyntese extends javax.swing.JPanel implements Observer{
     /**
      * Creates new form ViewScore
      */
-    public ViewSyntese() {
+      public ViewSyntese() {
+        partie = new Partie();
         initComponents();
     }
 
     ViewSyntese(Partie p){
+         
         partie = p;
         partie.addObserver(this);
     }
@@ -45,17 +47,13 @@ public class ViewSyntese extends javax.swing.JPanel implements Observer{
         labelScoreA = new javax.swing.JLabel();
         labelScoreB = new javax.swing.JLabel();
 
+        setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         jLabel1.setText("Nb de coups:");
 
         jLabel2.setText("Score de A:");
 
         jLabel3.setText("Score de B:");
-
-        labelNbCoup.setText("0");
-
-        labelScoreA.setText("0");
-
-        labelScoreB.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -66,17 +64,17 @@ public class ViewSyntese extends javax.swing.JPanel implements Observer{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(labelScoreB))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(labelScoreA))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(labelNbCoup)))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

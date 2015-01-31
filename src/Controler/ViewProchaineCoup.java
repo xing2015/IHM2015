@@ -18,6 +18,7 @@ public class ViewProchaineCoup extends javax.swing.JPanel {
      * Creates new form ViewEntree
      */
     public ViewProchaineCoup() {
+        partie = new Partie();
         initComponents();
     }
 
@@ -128,13 +129,13 @@ public class ViewProchaineCoup extends javax.swing.JPanel {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+   
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // CC
-        partie.Cooperer(true,true);
-        
+        partie.Cooperer(true,true);        
     }//GEN-LAST:event_jButton1ActionPerformed
-
+  
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // CD
         partie.Cooperer(true,false);
